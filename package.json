@@ -1,0 +1,16 @@
+{
+  "name": "docker0project-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "createfile" : "node createfile.js",
+    "copy": "docker-compose up --build -d & docker cp `docker ps -aqf \"name=docker_web\"`:/usr/src/app/created.txt ./"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
